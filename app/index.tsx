@@ -1,16 +1,8 @@
-import { View, Text } from 'react-native'
 import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { Redirect } from 'expo-router'
 
 const App = () => {
-  return (
-    <SafeAreaView>
-      <View>
-        <Text>App Redux</Text>
-      </View>
-    </SafeAreaView>
-
-  )
+  return <Redirect href="/product"/>
 }
 
 export default App;
