@@ -4,7 +4,7 @@ import { store } from '@/redux/store';
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 // Import your global CSS file
-import "@/global.css";
+import "../global.css";
 
 const Layout: React.FC = () => {
   return (

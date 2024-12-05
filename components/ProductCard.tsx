@@ -13,7 +13,7 @@ interface IProductCardProps {
 const ProductCard: React.FC<IProductCardProps> = ({title, price, image, onPress}) => {
   return (
     <View style={styles.cardContainer}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={onPress}>
         <Image 
           source={{uri: image}}
           style={styles.image}

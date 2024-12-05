@@ -33,7 +33,7 @@ const Product = () => {
             title={item.title}
             price={item.price}
             image={item.image}
-            onPress={() => router.push(`/product`)}
+            onPress={() => router.push(`/product/${item.id}`)}
           />
         )}
         // Mostramos 2 Productos por fila
