@@ -36,6 +36,8 @@ const Product = () => {
             onPress={() => router.push(`/product`)}
           />
         )}
+        // Mostramos 2 Productos por fila
+        numColumns={2}
       />
     </View>
   )
