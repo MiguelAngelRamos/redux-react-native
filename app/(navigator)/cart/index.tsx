@@ -2,7 +2,7 @@ import { View, Text, FlatList, Button } from 'react-native'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
-import { clearCart } from '@/redux/slices/cartSlice';
+import { clearCart, removeFromCart } from '@/redux/slices/cartSlice';
 
 const Cart = () => {
   const cartItems = useSelector((state:RootState) => state.cart.items);
@@ -17,6 +17,8 @@ const Cart = () => {
           <View className="flex-row justify-between items-center p-4 bg-white rounded-lg mb-2 shadow-slate-400">
             <Text>{item.title}</Text>
             <Text>${item.price} x {item.quantity}</Text>
+
+            <Button title="Remove" onPress={() => dispatch(   removeFromCart(item.id)) }></Button>
           </View>
         )}
       />
